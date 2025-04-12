@@ -60,10 +60,12 @@ export async function POST(request: Request) {
       { message: 'Email sent successfully', data: { dataToOwner, dataToSender } },
       { status: 200 }
     );
-  } catch (error: any) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error: unknown) {
     console.error('Email sending error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     return NextResponse.json(
-      { error: 'Failed to send email', message: error?.message || 'Unknown error' },
+      { error: 'Failed to send email', message: errorMessage },
       { status: 500 }
     );
   }

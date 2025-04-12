@@ -13,6 +13,7 @@ const Contact = () => {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [isTestMode, setIsTestMode] = useState(false);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -46,11 +47,13 @@ const Contact = () => {
       
       setIsSubmitting(false);
       setSubmitSuccess(true);
+      setIsTestMode(!!data.note);
       setFormData({ name: '', email: '', subject: '', message: '' });
       
       // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitSuccess(false);
+        setIsTestMode(false);
       }, 5000);
     } catch (error) {
       setIsSubmitting(false);
@@ -117,7 +120,13 @@ const Contact = () => {
           >
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
             
-            {submitSuccess ? (
+            {submitSuccess && isTestMode ? (
+              <div className="text-[var(--accent)] bg-[var(--accent)]/10 border border-[var(--accent)]/20 rounded-md p-4 mb-6">
+                <p>Message received! Currently in testing mode:</p>
+                <p className="text-sm mt-1">In development, emails are only sent to the site owner. 
+                Confirmation emails to submitters will be enabled once the site is deployed with a verified domain.</p>
+              </div>
+            ) : submitSuccess ? (
               <div className="text-[var(--accent)] bg-[var(--accent)]/10 border border-[var(--accent)]/20 rounded-md p-4 mb-6">
                 Your message has been sent successfully. I&apos;ll get back to you soon!
               </div>

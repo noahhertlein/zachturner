@@ -95,7 +95,7 @@ const Contact = () => {
             
             {submitSuccess ? (
               <div className="text-[var(--accent)] bg-[var(--accent)]/10 border border-[var(--accent)]/20 rounded-md p-4 mb-6">
-                Your message has been sent successfully. I'll get back to you soon!
+                Your message has been sent successfully. I&apos;ll get back to you soon!
               </div>
             ) : null}
             

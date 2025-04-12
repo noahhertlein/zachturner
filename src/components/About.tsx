@@ -56,15 +56,15 @@ const About = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-semibold">Hi, I'm Zachary Turner</h3>
+            <h3 className="text-2xl font-semibold">Hi, I&apos;m Zachary Turner</h3>
             <p className="text-gray-300">
-              I'm a cybersecurity student specializing in penetration testing and offensive security techniques. 
-              Currently pursuing a Bachelor's degree in Cybersecurity at Southern New Hampshire University, 
-              I've also completed 71 hours toward a Bachelor of Science in Computer Science at the University of Arkansas.
+              I&apos;m a cybersecurity student specializing in penetration testing and offensive security techniques. 
+              Currently pursuing a Bachelor&apos;s degree in Cybersecurity at Southern New Hampshire University, 
+              I&apos;ve also completed 71 hours toward a Bachelor of Science in Computer Science at the University of Arkansas.
             </p>
             <p className="text-gray-300">
               My expertise is in penetration testing, network exploitation, and identifying security vulnerabilities. 
-              I'm constantly expanding my knowledge through practical testing projects and certifications, 
+              I&apos;m constantly expanding my knowledge through practical testing projects and certifications, 
               having already earned my Junior Penetration Tester certification and actively working toward Security+.
             </p>
 

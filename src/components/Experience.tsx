@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaBuilding, FaWrench, FaSwimmer, FaStore, FaGlobeAmericas } from 'react-icons/fa';
+import { FaBuilding, FaWrench, FaSwimmer, FaStore, FaGlobeAmericas } from 'react-icons/fa';
 
 // Experience data from Zachary's resume
 const experiences = [

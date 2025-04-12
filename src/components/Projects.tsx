@@ -1,7 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
 import { FaMapMarkedAlt, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import Image from 'next/image';
 
 const projects = [
   {

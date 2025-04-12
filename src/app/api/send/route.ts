@@ -38,8 +38,8 @@ export async function POST(request: Request) {
     // For development/testing, we'll skip the confirmation email
     // since we can only send to the registered email
     // and add information about this in the response
-    let dataToSender = null;
-    let errorToSender = null;
+    const dataToSender = null;
+    const errorToSender = null;
     
     // In production with verified domain, uncomment this code
     /*
@@ -83,7 +83,6 @@ export async function POST(request: Request) {
       },
       { status: 200 }
     );
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: unknown) {
     console.error('Email sending error:', error);
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';

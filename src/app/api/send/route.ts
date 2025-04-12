@@ -50,8 +50,13 @@ export async function POST(request: Request) {
     });
 
     if (errorToOwner || errorToSender) {
+      const errorObj = errorToOwner || errorToSender;
+      const errorMessage = typeof errorObj === 'object' && errorObj !== null 
+        ? errorObj.message || JSON.stringify(errorObj)
+        : String(errorObj);
+
       return NextResponse.json(
-        { error: errorToOwner || errorToSender },
+        { error: errorMessage },
         { status: 500 }
       );
     }

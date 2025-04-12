@@ -22,12 +22,28 @@ const Contact = () => {
     }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+      
       setIsSubmitting(false);
       setSubmitSuccess(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
@@ -36,7 +52,15 @@ const Contact = () => {
       setTimeout(() => {
         setSubmitSuccess(false);
       }, 5000);
-    }, 1500);
+    } catch (error) {
+      setIsSubmitting(false);
+      setSubmitError(error instanceof Error ? error.message : 'An unexpected error occurred');
+      
+      // Clear error message after 5 seconds
+      setTimeout(() => {
+        setSubmitError(null);
+      }, 5000);
+    }
   };
   
   const contactInfo = [
@@ -96,6 +120,12 @@ const Contact = () => {
             {submitSuccess ? (
               <div className="text-[var(--accent)] bg-[var(--accent)]/10 border border-[var(--accent)]/20 rounded-md p-4 mb-6">
                 Your message has been sent successfully. I&apos;ll get back to you soon!
+              </div>
+            ) : null}
+            
+            {submitError ? (
+              <div className="text-red-500 bg-red-500/10 border border-red-500/20 rounded-md p-4 mb-6">
+                Error: {submitError}
               </div>
             ) : null}
             

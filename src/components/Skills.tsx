@@ -6,13 +6,13 @@ const skillCategories = [
   {
     name: "Penetration Testing",
     icon: <FaShieldAlt />,
-    skills: ["Metasploit", "BurpSuite", "WireShark", "Hydra", "Privilege Escalation", "Exploit Development", "OWASP Top 10"],
+    skills: ["Metasploit", "BurpSuite", "WireShark", "Hydra", "Vulnerability Assessment", "Exploitation", "Information Security"],
     color: "var(--primary)"
   },
   {
     name: "Security Tools",
     icon: <FaToolbox />,
-    skills: ["Nmap", "DirBuster", "JohnTheRipper", "Windows Defender/Firewall", "SQLMap"],
+    skills: ["Nmap", "DirBuster", "JohnTheRipper", "Windows Defender/Firewall", "NetCat", "Kali"],
     color: "#22cc88"
   },
   {
@@ -22,21 +22,21 @@ const skillCategories = [
     color: "var(--accent)"
   },
   {
-    name: "Environments",
+    name: "Environments & Tools",
     icon: <FaServer />,
-    skills: ["Linux", "Kali", "VirtualBox"],
+    skills: ["Linux", "VirtualBox", "Vim", "GitHub", "Visual Studio Code", "SSH"],
     color: "var(--secondary)"
   },
   {
-    name: "Development",
+    name: "Business Applications",
     icon: <FaTerminal />,
-    skills: ["Vim", "GitHub", "Visual Studio Code", "Pip3"],
+    skills: ["Entrata", "Leonardo247", "BigCommerce"],
     color: "#0066aa"
   },
   {
-    name: "Networking",
+    name: "Soft Skills",
     icon: <FaNetworkWired />,
-    skills: ["SSH", "NetCat", "TCP/IP", "Network Security"],
+    skills: ["Customer Service", "Troubleshooting", "Communication", "Detail Oriented", "Team-Player"],
     color: "#5200a8"
   }
 ];
@@ -91,11 +91,11 @@ const SkillCard = ({ category, index }: { category: typeof skillCategories[0]; i
 
 const Skills = () => {
   const mainSkills = [
-    { name: "Penetration Testing", proficiency: 90 },
-    { name: "Exploit Development", proficiency: 85 },
-    { name: "Network Security", proficiency: 80 },
-    { name: "Python", proficiency: 75 },
-    { name: "Linux Environment", proficiency: 85 },
+    { name: "Vulnerability Assessment", proficiency: 90 },
+    { name: "Penetration Testing", proficiency: 85 },
+    { name: "Information Security", proficiency: 80 },
+    { name: "Technical Troubleshooting", proficiency: 85 },
+    { name: "Python & C++", proficiency: 75 },
   ];
 
   return (

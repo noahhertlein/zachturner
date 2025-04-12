@@ -9,7 +9,12 @@ const experiences = [
     company: "Hill Place Apartments",
     location: "Fayetteville, AR",
     period: "05/2024 - Current",
-    description: "Performed daily maintenance and repairs across over 400 units, addressing a wide range of issues including plumbing, electrical, HVAC, drywall, and appliance malfunctions, ensuring optimal living conditions for 800+ residents.",
+    description: [
+      "Performed daily maintenance and repairs across over 400 units, addressing a wide range of issues including plumbing, electrical, HVAC, drywall, and appliance malfunctions, ensuring optimal living conditions for 800+ residents.",
+      "Managed a high volume of service tickets, prioritizing tasks based on urgency and resource availability to maintain smooth operations in a high-traffic student housing environment.",
+      "Executed maintenance and repairs to complete rapid turnarounds for vacant units, focusing on high-priority and cosmetic improvements, successfully meeting the three-week deadline for all 400+ units.",
+      "Provided reliable on-call support for emergency maintenance requests, effectively troubleshooting and resolving complex issues, from flooding and power outages to appliance breakdowns, ensuring 24/7 functionality and tenant satisfaction."
+    ],
     icon: <FaWrench />
   },
   {

@@ -59,8 +59,8 @@ const About = () => {
             <h3 className="text-2xl font-semibold">Hi, I&apos;m Zachary Turner</h3>
             <p className="text-gray-300">
               I&apos;m a cybersecurity student specializing in penetration testing and offensive security techniques. 
-              Currently pursuing a Bachelor&apos;s degree in Cybersecurity at Southern New Hampshire University, 
-              I&apos;ve also completed 71 hours toward a Bachelor of Science in Computer Science at the University of Arkansas.
+              Currently pursuing a Bachelor&apos;s degree in Cybersecurity at Southern New Hampshire University (expected completion 12/2026), 
+              I&apos;ve also completed 71 hours toward a Bachelor of Science in Computer Science with an emphasis in Cybersecurity at the University of Arkansas.
             </p>
             <p className="text-gray-300">
               My expertise is in penetration testing, network exploitation, and identifying security vulnerabilities. 
